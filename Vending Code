@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+void terima_kasih(){
+		cout <<"\tTerima kasih udah beli, kapan kapan beli lagi";
+	}
+int main(){
+	
+	int pesanan, kuantitas;
+	char ya, tidak;
+	string pesan, pilihan;
+	int uang  = 0, bayar, kembalian;
+	
+	pilihan [1];
+	
+do{
+
+cout << "\t	Selamat Datang Di Vending Machine Ebimsa88 "<<endl << pilihan [1];
+cout << "\t\t                   MENU "<<endl;
+cout << "\t\t        1. Air Enggal   -  10 koin\n";
+cout << "\t\t        2. Es Teh       -  15 koin\n ";
+cout << "\t\t        3. SiSegar      -  20 koin\n ";
+cout << "\t\t        4. Air Khusus   -  30 koin\n ";        
+cout << "\t\t        5. SiMineral    -  40 koin\n  "<<endl;
+
+	cout<<pilihan[1]<<"\tPilih Pesanan Anda(1-5) : ";
+	cin>> pesanan;
+	cout<<endl; 
+	cout<<pilihan[1]<<"\tMau Beli Berapa? : ";
+	cin>> kuantitas;
+	cout<<endl;
+	cout<<pilihan[1]<<"\tMasukkan Uang Anda : ";
+	cin>> bayar;
+	cout<<endl;	
+	
+switch(pesanan){
+	case 1:
+		pesan = " Air Enggal ";
+		uang = kuantitas * 10;
+		break;
+	case 2:
+		pesan = " Es Teh ";
+		uang = kuantitas * 15;
+		break;
+	case 3:
+		pesan = " SiSegar ";
+		uang = kuantitas * 20;
+		break;
+	case 4:
+		pesan = " Air Khusus ";
+		uang = kuantitas * 30 ;
+		break;
+	case 5:
+		pesan = " SiMineral";
+		uang = kuantitas * 40 ;
+		break;
+		
+	default: 
+	cout << " Pilih Menu 1 - 5 ";
+	break;
+}	
+	
+	if (bayar < uang )
+	{
+		cout <<"\tMaaf gan, Duitnya ga cukup buat beli ini. "<<endl;
+		
+		cout <<"\tIni Dibalikkin duitnya" <<" "<< bayar <<" koin "<<endl;;
+	}
+	
+	else
+	{
+	
+	cout <<"\tPesanan anda    : ";
+	cout << kuantitas << " botol" << pesan <<endl;
+	
+	cout <<"\tTotal pesanan   : " << uang << " koin"<<endl; 
+	
+	kembalian = bayar - uang;
+	cout <<"\tKembalian anda  : " <<kembalian<<" koin "<<endl;;
+	}
+	
+	
+	cout<<pilihan[1]<<"\tApakah ada yang anda ingin beli lagi? (y/t): ";
+	cin>>ya;
+	cout<<endl;	
+}
+
+while(ya == 'Y'|| ya == 'y');;
+
+terima_kasih();
+
+return 0;	
+}
