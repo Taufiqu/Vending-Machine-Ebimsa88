@@ -6,15 +6,18 @@ void terima_kasih(){
 int main(){
 	
 	int pesanan, kuantitas;
-	char ya, tidak;
-	string pesan, pilihan;
+	char ya;
+	string pesan;
 	int uang  = 0, bayar, kembalian;
 	
-	pilihan [1];
+	string pertanyaan [3];
+	pertanyaan [0] = "\tPilih Pesanan Anda(1-5) : ";
+	pertanyaan [1] = "\tMau Beli Berapa? : ";
+	pertanyaan [2] = "\tMasukkan Uang Anda : ";
 	
 do{
 
-cout << "\t	Selamat Datang Di Vending Machine Ebimsa88 "<<endl << pilihan [1];
+cout << "\t	Selamat Datang Di Vending Machine Ebimsa88 "<<endl;
 cout << "\t\t                   MENU "<<endl;
 cout << "\t\t        1. Air Enggal   -  10 koin\n";
 cout << "\t\t        2. Es Teh       -  15 koin\n ";
@@ -22,13 +25,13 @@ cout << "\t\t        3. SiSegar      -  20 koin\n ";
 cout << "\t\t        4. Air Khusus   -  30 koin\n ";        
 cout << "\t\t        5. SiMineral    -  40 koin\n  "<<endl;
 
-	cout<<pilihan[1]<<"\tPilih Pesanan Anda(1-5) : ";
+	cout<<pertanyaan[0];
 	cin>> pesanan;
 	cout<<endl; 
-	cout<<pilihan[1]<<"\tMau Beli Berapa? : ";
+	cout<<pertanyaan[1];
 	cin>> kuantitas;
 	cout<<endl;
-	cout<<pilihan[1]<<"\tMasukkan Uang Anda : ";
+	cout<<pertanyaan[2];
 	cin>> bayar;
 	cout<<endl;	
 	
@@ -61,7 +64,7 @@ switch(pesanan){
 	
 	if (bayar < uang )
 	{
-		cout <<"\tMaaf gan, Duitnya ga cukup buat beli ini. "<<endl;
+		cout <<"\tMaaf, Duitnya ga cukup buat beli ini. "<<endl;
 		
 		cout <<"\tIni Dibalikkin duitnya" <<" "<< bayar <<" koin "<<endl;;
 	}
@@ -79,7 +82,7 @@ switch(pesanan){
 	}
 	
 	
-	cout<<pilihan[1]<<"\tApakah ada yang anda ingin beli lagi? (y/t): ";
+	cout<<"\tApakah ada yang anda ingin beli lagi? (y/t): ";
 	cin>>ya;
 	cout<<endl;	
 }
