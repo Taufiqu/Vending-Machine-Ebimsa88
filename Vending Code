@@ -5,10 +5,10 @@ void terima_kasih(){
 	}
 int main(){
 	
-	int pesanan, kuantitas;
+	int pesanan, kuantitas, bayar;
 	char ya;
 	string pesan;
-	int uang  = 0, bayar, kembalian;
+	int harga , kembalian;
 	
 	string pertanyaan [3];
 	pertanyaan [0] = "\tPilih Pesanan Anda(1-5) : ";
@@ -38,46 +38,51 @@ cout << "\t\t        5. SiMineral    -  40 koin\n  "<<endl;
 switch(pesanan){
 	case 1:
 		pesan = " Air Enggal ";
-		uang = kuantitas * 10;
+		harga = kuantitas * 10;
 		break;
 	case 2:
 		pesan = " Es Teh ";
-		uang = kuantitas * 15;
+		harga = kuantitas * 15;
 		break;
 	case 3:
 		pesan = " SiSegar ";
-		uang = kuantitas * 20;
+		harga = kuantitas * 20;
 		break;
 	case 4:
 		pesan = " Air Khusus ";
-		uang = kuantitas * 30 ;
+		harga = kuantitas * 30 ;
 		break;
 	case 5:
 		pesan = " SiMineral";
-		uang = kuantitas * 40 ;
+		harga = kuantitas * 40 ;
 		break;
 		
 	default: 
-	cout << " Pilih Menu 1 - 5 ";
+	cout<<endl;
 	break;
 }	
 	
-	if (bayar < uang )
+	if (bayar < harga )
 	{
 		cout <<"\tMaaf, Duitnya ga cukup buat beli ini. "<<endl;
 		
 		cout <<"\tIni Dibalikkin duitnya" <<" "<< bayar <<" koin "<<endl;;
 	}
-	
+	else if (pesanan > 5){
+		
+		cout<<"\tPilih Pesanan (1-5) cuy!";
+		
+		cout<<endl;
+	}
 	else
 	{
 	
 	cout <<"\tPesanan anda    : ";
 	cout << kuantitas << " botol" << pesan <<endl;
 	
-	cout <<"\tTotal pesanan   : " << uang << " koin"<<endl; 
+	cout <<"\tTotal pesanan   : " << harga << " koin"<<endl; 
 	
-	kembalian = bayar - uang;
+	kembalian = bayar - harga;
 	cout <<"\tKembalian anda  : " <<kembalian<<" koin "<<endl;;
 	}
 	
